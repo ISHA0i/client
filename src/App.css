@@ -1,5 +1,31 @@
+/* Global Styles */
 .App {
   text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+}
+
+main {
+  flex: 1;
+  padding-top: 60px; /* Account for fixed navbar */
+}
+
+/* Dark Theme Styles */
+:root {
+  --bg-dark: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --card-bg: #1e1e1e;
+  --border-color: #333333;
+  --primary-color: #4a90e2;
+  --hover-color: #357abd;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
 }
 
 .App-logo {
@@ -28,11 +54,237 @@
   color: #61dafb;
 }
 
+/* Custom Link Styles */
+a {
+  text-decoration: none;
+}
+
+/* Skills Progress Bars */
+.skills-container .progress {
+  border-radius: 20px;
+  background-color: #e9ecef;
+}
+
+.skills-container .progress-bar {
+  border-radius: 20px;
+  transition: width 1s ease-in-out;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card Hover Effects */
+.card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.card-body {
+  color: var(--text-primary);
+}
+
+/* Social Media Icons Hover Effects */
+.social-icons a {
+  transition: opacity 0.3s ease-in-out;
+  color: var(--text-primary) !important;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+  color: var(--primary-color) !important;
+}
+
+/* Button Hover Effects */
+.btn {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(18, 18, 18, 0.95) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand, .nav-link {
+  color: var(--text-primary) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--hover-color) !important;
+  border-color: var(--hover-color) !important;
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Form Styles */
+.form-control {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-primary) !important;
+}
+
+.form-control:focus {
+  background-color: var(--card-bg);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Progress Bars */
+.progress {
+  background-color: var(--border-color) !important;
+}
+
+.progress-bar {
+  background-color: var(--primary-color) !important;
+}
+
+/* Badge Styles */
+.badge {
+  background-color: var(--primary-color) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Alert Styles */
+.alert {
+  background-color: var(--card-bg);
+  border-color: var (--border-color);
+}
+
+/* Footer Styles */
+footer {
+  background-color: rgba(18, 18, 18, 0.95) !important;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Project Card Styles */
+.project-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.card-img-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  background-color: var(--card-bg);
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* Social Links */
+.social-link {
+  color: var(--text-secondary);
+  transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+/* Form Control Dark */
+.form-control-dark::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+/* Custom Progress Bar */
+.custom-progress {
+  background-color: var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.custom-progress .progress-bar {
+  background: linear-gradient(90deg, var(--primary-color), var(--hover-color));
+  transition: width 1s ease-in-out;
+}
+
+/* Profile Image */
+.profile-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-img-wrapper::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.5;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
   }
 }
