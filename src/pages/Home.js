@@ -32,7 +32,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
             >
-              Hi, I'm <span className="text-primary">Your Name</span>
+              Hi, I'm <span className="text-primary">ISHA CHOVATIYA</span>
             </motion.h1>
             
             <motion.p
@@ -41,7 +41,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Full Stack Developer passionate about creating innovative web solutions
+              REACT Developer passionate about creating innovative web solutions and AI Enthusiast.
             </motion.p>
 
             <motion.div

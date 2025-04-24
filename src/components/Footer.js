@@ -8,7 +8,7 @@ const Footer = () => {
       <Container className="text-center">
         <div className="mb-3 social-icons">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/ISHA0i?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="me-3 fs-4"
@@ -16,7 +16,7 @@ const Footer = () => {
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/isha-chovatiya-4a6194289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             rel="noopener noreferrer"
             className="fs-4"
@@ -24,7 +24,9 @@ const Footer = () => {
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
-        <p className="mb-0 text-secondary">© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p className="mb-0 text-secondary">
+          © {new Date().getFullYear()} ISHA CHOVATIYA. All rights reserved.
+        </p>
       </Container>
     </footer>
   );

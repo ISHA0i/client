@@ -10,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/projects');
+        const response = await axios.get('http://localhost:5004/api/projects');
         setProjects(response.data);
       } catch (error) {
         console.error('Error fetching projects:', error);
@@ -62,9 +62,9 @@ const Projects = () => {
                     <Card.Text className="text-secondary">{project.description}</Card.Text>
                     <div className="mt-auto">
                       <div className="d-flex flex-wrap gap-2 mb-3">
-                        {project.techStack.map((tech, i) => (
+                        {project.tags && project.tags.map((tag, i) => (
                           <span key={i} className="badge bg-primary">
-                            {tech}
+                            {tag}
                           </span>
                         ))}
                       </div>

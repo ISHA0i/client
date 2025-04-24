@@ -13,6 +13,8 @@ const About = () => {
     { name: 'Bootstrap', level: 85 }
   ];
 
+  const resumeUrl = 'http://localhost:5004/api/download/resume';
+
   return (
     <Container className="py-5">
       <motion.div
@@ -42,19 +44,23 @@ const About = () => {
                 />
               </div>
               <p className="lead text-secondary mb-4">
-                I'm a passionate Full Stack Developer with experience in building web applications
+                I'm a passionate REACT Developer with experience in building web applications
                 using modern technologies. I love turning complex problems into simple, beautiful,
                 and intuitive solutions.
               </p>
-              <Button
-                variant="primary"
-                href="/path-to-your-resume.pdf"
+              <a
+                href={resumeUrl}
                 target="_blank"
-                className="mb-5"
+                rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={faDownload} className="me-2" />
-                Download Resume
-              </Button>
+                <Button
+                  variant="primary"
+                  className="mb-5"
+                >
+                  <FontAwesomeIcon icon={faDownload} className="me-2" />
+                  Download Resume
+                </Button>
+              </a>
             </motion.div>
           </Col>
         </Row>

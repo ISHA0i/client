@@ -119,7 +119,7 @@ const Contact = () => {
                 <h5 className="text-secondary mb-3">Connect With Me</h5>
                 <div className="d-flex justify-content-center gap-4">
                   <motion.a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/ISHA0i?tab=repositories"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
@@ -129,7 +129,7 @@ const Contact = () => {
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                   </motion.a>
                   <motion.a
-                    href="https://linkedin.com/in/yourusername"
+                    href="https://www.linkedin.com/in/isha-chovatiya-4a6194289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-link"
