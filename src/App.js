@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import './project.css';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -73,9 +74,9 @@ function App() {
                   <strong> MySql</strong>, and <strong>Google Cloud</strong>. I
                   specialize in building scalable, real-world applications that
                   provide efficient solutions for users. Some of the projects
-                  I’ve worked that's shown below. In addition to web
+                  I've worked on that's shown below. In addition to web
                   development, I have hands-on experience with{' '}
-                  <strong>Google Cloud Platform</strong>, where I’ve earned
+                  <strong>Google Cloud Platform</strong>, where I've earned
                   badges in areas like <strong>Compute Engine</strong> and{' '}
                   <strong>BigQuery</strong>, further enhancing my ability to
                   build cloud-native applications.
@@ -91,8 +92,8 @@ function App() {
             <h2 className="text-center mb-5">My Projects</h2>
             <Row className="justify-content-center">
               {projects.map((project) => (
-                <Col md={8} key={project.id} className="mb-4">
-                  <Card className="shadow-sm">
+                <Col lg={6} key={project.id} className="mb-4">
+                  <Card className={`project-card project-${getProjectTheme(project.title)}`}>
                     <Card.Body className="p-4">
                       <Card.Title className="h3 mb-3">
                         {project.title}
@@ -104,7 +105,7 @@ function App() {
                         {project.technologies.map((tech, index) => (
                           <span
                             key={index}
-                            className="badge bg-primary me-2 mb-2 p-2"
+                            className="badge me-2 mb-2"
                           >
                             {tech}
                           </span>
@@ -114,7 +115,7 @@ function App() {
                         <Card.Link
                           href={project.githubLink}
                           target="_blank"
-                          className="btn btn-outline-primary"
+                          className="card-link"
                         >
                           View on GitHub
                         </Card.Link>
@@ -122,7 +123,7 @@ function App() {
                         <Card.Link
                           href={project.link}
                           target="_blank"
-                          className="btn btn-outline-primary"
+                          className="card-link"
                         >
                           View Achievement
                         </Card.Link>
@@ -138,6 +139,15 @@ function App() {
       <Footer />
     </div>
   );
+}
+
+function getProjectTheme(title) {
+  const titleLower = title.toLowerCase();
+  if (titleLower.includes('kalaa')) return 'kalaa';
+  if (titleLower.includes('audit')) return 'audit';
+  if (titleLower.includes('schedule')) return 'schedule';
+  if (titleLower.includes('cloud')) return 'cloud';
+  return 'default';
 }
 
 export default App;

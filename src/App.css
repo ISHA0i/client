@@ -452,12 +452,119 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary) !important;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-  background-color: var(--bg-darker);
-  border-top: 1px solid var(--border-color);
-  padding: 20px 0;
+  background-color: var(--bg-black);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.social-icons {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.social-link {
   color: var(--text-secondary);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px; /* Minimum touch target size */
+  min-height: 44px; /* Minimum touch target size */
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--accent-primary), transparent);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+}
+
+.social-link:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.social-link:hover::before {
+  opacity: 0.2;
+  transform: scale(1);
+}
+
+/* Different colors for different social links */
+.social-link[title="GitHub"]:hover {
+  color: #fff;
+}
+
+.social-link[title="LinkedIn"]:hover {
+  color: #0077b5;
+}
+
+.social-link[title="Email Me"]:hover {
+  color: #ea4335;
+}
+
+footer .text-secondary {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  padding: 0 1rem;
+  line-height: 1.5;
+}
+
+/* Responsive Footer Styles */
+@media (max-width: 768px) {
+  footer {
+    padding: 1.5rem 0;
+  }
+
+  .social-icons {
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-link {
+    font-size: 1.3rem;
+    padding: 0.6rem;
+  }
+
+  footer .text-secondary {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 1.2rem 0;
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+
+  .social-link {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  footer .container {
+    padding: 0 10px;
+  }
 }
 
 /* Custom Link Styles */

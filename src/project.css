@@ -1,0 +1,224 @@
+/* Project-specific themes */
+
+/* Kalaa Theme */
+.project-kalaa {
+  --project-gradient-start: #4a90e2;
+  --project-gradient-end: #357abd;
+  --project-accent: #4a90e2;
+  --project-text: #ffffff;
+  --project-bg-start: #111827;
+  --project-bg-end: #0a0f1a;
+}
+
+/* Cybersecurity Audit Theme */
+.project-audit {
+  --project-gradient-start: #10B981;
+  --project-gradient-end: #047857;
+  --project-accent: #10B981;
+  --project-text: #ffffff;
+  --project-bg-start: #1a1a1a;
+  --project-bg-end: #0f0f0f;
+}
+
+/* Schedule Generator Theme */
+.project-schedule {
+  --project-gradient-start: #8B5CF6;
+  --project-gradient-end: #6D28D9;
+  --project-accent: #8B5CF6;
+  --project-text: #ffffff;
+  --project-bg-start: #1a1a2e;
+  --project-bg-end: #0f0f1a;
+}
+
+/* Google Cloud Theme */
+.project-cloud {
+  --project-gradient-start: #F59E0B;
+  --project-gradient-end: #D97706;
+  --project-accent: #F59E0B;
+  --project-text: #ffffff;
+  --project-bg-start: #1a1a1a;
+  --project-bg-end: #0f0f0f;
+}
+
+/* Project Card Base Styles */
+.project-card {
+  background: linear-gradient(145deg, var(--project-bg-start), var(--project-bg-end)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+  height: 100%; /* Make all cards same height */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2rem !important;
+}
+
+.project-card .card-text {
+  flex-grow: 1;
+  color: var(--project-text) !important;
+  opacity: 0.9;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.project-card .card-title {
+  background: linear-gradient(45deg, 
+    var(--project-gradient-start), 
+    var(--project-gradient-end)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 0 0 1.5rem 0;
+}
+
+.project-card .badge {
+  background: linear-gradient(135deg, 
+    var(--project-gradient-start), 
+    var(--project-gradient-end)
+  ) !important;
+  color: var(--project-text) !important;
+  padding: 0.6rem 1rem !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  border-radius: 20px !important;
+  margin: 0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.project-card .card-link {
+  align-self: center;
+  color: var(--project-accent) !important;
+  border: 2px solid var(--project-accent);
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  background: transparent;
+  margin-top: auto; /* Push button to bottom */
+}
+
+/* Projects Section */
+#projects {
+  padding: 80px 0;
+  background-color: var(--bg-black);
+}
+
+#projects .container {
+  max-width: 1400px; /* Increased for better two-column layout */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: linear-gradient(45deg, var(--text-primary), var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .project-card .card-title {
+    font-size: 1.6rem;
+  }
+
+  .project-card .card-text {
+    font-size: 0.95rem;
+  }
+
+  .project-card .badge {
+    padding: 0.5rem 0.9rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .project-card .card-link {
+    padding: 0.7rem 1.3rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .container {
+    padding: 0 15px;
+  }
+
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-card .card-body {
+    padding: 1.5rem !important;
+  }
+}
+
+/* Container max-width adjustments */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px !important;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-card .card-body {
+    padding: 1.5rem !important;
+  }
+
+  .project-card .card-title {
+    font-size: 1.6rem;
+  }
+
+  .project-card .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-card .card-body {
+    padding: 2rem !important;
+  }
+  
+  /* Add some spacing between cards */
+  .col-lg-6:nth-child(odd) {
+    padding-right: 1rem;
+  }
+  
+  .col-lg-6:nth-child(even) {
+    padding-left: 1rem;
+  }
+}
