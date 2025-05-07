@@ -1,18 +1,23 @@
+import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 const Navigation = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top" className="navbar-dark">
+    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
       <Container>
-        <Navbar.Brand as={Link} to="/">Portfolio</Navbar.Brand>
+        <Navbar.Brand href="#" onClick={() => scrollToSection('home')}>Portfolio</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about">About</Nav.Link>
-            <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection('home')}>Home</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection('about')}>About</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection('projects')}>Projects</Nav.Link>
+            <Nav.Link onClick={() => scrollToSection('contact')}>Contact</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
