@@ -9,7 +9,7 @@ const Footer = () => {
       <Container className="text-center">
         <div className="mb-4 social-icons d-flex justify-content-center align-items-center gap-4">
           <a
-            href="https://github.com/ISHA0i?tab=repositories"
+            href="https://github.com/ISHA0i"
             target="_blank"
             rel="noopener noreferrer"
             className="social-link"
