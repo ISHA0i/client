@@ -27,7 +27,7 @@ function App() {
       description:
         'A web-based tool that automatically generates optimal class schedules based on course selections. Users can input their chosen courses, and the application efficiently creates a conflict-free timetable tailored to their preferences.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Bootstrap'],
-      githubLink: 'https://github.com/ISHA0i/Random-Schedule-Generator.git',
+      githubLink: 'https://random-schedule-generator.onrender.com',
     },
     {
       title: 'Google Cloud Skills Boost Profile',
