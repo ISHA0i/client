@@ -27,7 +27,7 @@ function App() {
       description:
         'A web-based tool that automatically generates optimal class schedules based on course selections. Users can input their chosen courses, and the application efficiently creates a conflict-free timetable tailored to their preferences.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Bootstrap'],
-      githubLink: 'https://random-schedule-generator.onrender.com',
+      live: 'https://random-schedule-generator.onrender.com',
     },
     {
       title: 'Google Cloud Skills Boost Profile',
@@ -112,12 +112,31 @@ function App() {
                         ))}
                       </div>
                       {project.githubLink ? (
+                        <div className="">
+                          <Card.Link
+                            href={project.githubLink}
+                            target="_blank"
+                            className="card-link"
+                          >
+                            View on GitHub
+                          </Card.Link>
+                          {project.live && (
+                            <Card.Link
+                              href={project.live}
+                              target="_blank"
+                              className="card-link"
+                            >
+                              Live Demo
+                            </Card.Link>
+                          )}
+                        </div>
+                      ) : project.live ? (
                         <Card.Link
-                          href={project.githubLink}
+                          href={project.live}
                           target="_blank"
                           className="card-link"
                         >
-                          View on GitHub
+                          Live Demo
                         </Card.Link>
                       ) : (
                         <Card.Link
